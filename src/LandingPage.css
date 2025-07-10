@@ -1,0 +1,81 @@
+/* General layout */
+.landing {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6fc;
+  padding: 30px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.navbar nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+
+.hero h2 {
+  font-size: 32px;
+  margin-top: 60px;
+  color: #34495e;
+}
+
+.hero p {
+  color: #777;
+  margin: 10px 0 30px;
+}
+
+/* Skill Input */
+.input-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box input {
+  padding: 10px 12px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.input-box button {
+  padding: 10px 18px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.skill-chip {
+  background-color: #d0ebff;
+  color: #0077b6;
+  padding: 6px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.match-btn {
+  margin-top: 20px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
