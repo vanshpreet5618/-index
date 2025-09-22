@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+@index - Skill-Based Job Matching Platform
+@index is a full-stack web application designed to transform the job search process by moving beyond simple keyword matching. It connects users to a dynamic database of over 500+ roles through intelligent, real-time, skill-based filtering.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Problem
+Traditional job platforms often rely on rigid job titles and keyword searches, leading to a frustrating experience where qualified candidates miss relevant opportunities and recruiters are flooded with mismatched applicants. The goal of @index is to solve this by focusing on the most important factor: the candidate's actual skills.
 
-## Available Scripts
+Key Features
+Real-Time Skill Filtering: Instantly filters and displays jobs that match a user's specific skill set, powered by the Adzuna API for live, relevant listings.
 
-In the project directory, you can run:
+Scalable MERN Stack Architecture: Built with a robust and high-performance backend using Node.js, Express, and MongoDB to ensure a responsive and reliable user experience.
 
-### `npm start`
+Dynamic Frontend: A clean, intuitive, and responsive user interface built with React.js for a seamless job discovery process.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Future-Proofed for AI: The backend has been architected to support future integration with NLP/LLM models, enabling even smarter, context-aware job recommendations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Tech Stack & Architecture
+This project was built using the MERN stack, chosen specifically for its performance, scalability, and flexibility in handling diverse data structures.
 
-### `npm test`
+Category
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Technology
 
-### `npm run build`
+Frontend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React.js, JavaScript (ES6+), HTML5, CSS3
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Backend
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Node.js, Express.js
 
-### `npm run eject`
+Database
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+MongoDB
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Adzuna API (for real-time job data)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Deployment
 
-## Learn More
+Vercel (Frontend), Render (Backend)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+My Strategic Decisions:
+Why MERN Stack? I chose the MERN stack because MongoDB's document-based, flexible schema is perfectly suited for a job platform where skill requirements and job descriptions can vary widely. Node.js and Express provide a high-performance, non-blocking backend ideal for handling numerous API requests efficiently.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Why Separate Deployments? Deploying the React frontend to Vercel and the Node.js backend to Render allowed for independent, scalable, and optimized hosting environments, following modern microservice best practices.
 
-### Code Splitting
+🚀 How To Run Locally
+To get a local copy up and running, follow these simple steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Prerequisites
+Node.js and npm installed
 
-### Analyzing the Bundle Size
+A MongoDB Atlas cluster or local MongoDB instance
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+An API key from Adzuna
 
-### Making a Progressive Web App
+Installation
+Clone the repo
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+git clone [https://github.com/your_username/@index.git](https://github.com/your_username/@index.git)
 
-### Advanced Configuration
+Install NPM packages for both the client and server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# In the root directory
+cd server && npm install
 
-### Deployment
+# In a separate terminal, from the root directory
+cd client && npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Create a .env file in the server directory and add your variables
 
-### `npm run build` fails to minify
+MONGO_URI='your_mongodb_connection_string'
+ADZUNA_APP_ID='your_adzuna_app_id'
+ADZUNA_API_KEY='your_adzuna_api_key'
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Start the development servers
+
+# To run the backend server
+cd server && npm run dev
+
+# To run the React frontend
+cd client && npm start
+
+🧠 Future Enhancements
+The next planned iteration for @index is to integrate a fine-tuned NLP/LLM to move beyond simple skill tagging. This will enable the platform to:
+
+Parse resumes to automatically extract a user's skills.
+
+Understand the nuanced context of job descriptions for more accurate matching.
+
+Recommend up-skilling pathways for users to qualify for their desired roles.
